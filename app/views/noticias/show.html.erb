@@ -1,0 +1,15 @@
+<div class="container">
+<%= render @noticia %>
+
+<div>
+<%= link_to "volver", noticias_path %>
+<% if user_signed_in? %>
+    <% if current_user.id == @noticia.user.id %>
+      <%= link_to "Editar", edit_noticia_path(@noticia) %> |
+      <%= button_to "Eliminar", @noticia, method: :delete %>
+    <% end %>  
+  <% end %>  
+  
+</div>
+
+</div>

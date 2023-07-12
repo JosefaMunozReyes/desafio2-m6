@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Noti-Fake</h1>
+<div class="container">
+<div id="noticias">
+  <% @noticias.each do |noticia| %>
+    <div class="card">
+      <div class="card-body">
+      <%= render noticia %>
+      <%= link_to "Ver detalles", noticia, class:"btn btn-dark btn-sm" %>
+      
+      <%= link_to "Comentar", new_cometario_path, class:"btn btn-dark btn-sm" %>
+    
+      </div>
+    </div>
+    
+    
+  <% end %>
+  <br>
+</div>
+</div>
+
+<%= link_to "Agregar otra", new_noticia_path, class:"btn btn-dark btn-sm"%>

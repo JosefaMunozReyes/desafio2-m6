@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cometario %>
+
+<div>
+  <%= link_to "Edit this cometario", edit_cometario_path(@cometario) %> |
+  <%= link_to "Back to cometarios", cometarios_path %>
+
+  <%= button_to "Destroy this cometario", @cometario, method: :delete %>
+</div>

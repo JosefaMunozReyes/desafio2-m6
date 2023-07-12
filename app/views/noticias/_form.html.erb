@@ -1,0 +1,28 @@
+<%= form_with(model: noticia) do |form| %>
+  <% if noticia.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(noticia.errors.count, "error") %> prohibited this noticia from being saved:</h2>
+
+      <ul>
+        <% noticia.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div>
+    <%= form.label :titulo, style: "display: block" %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, style: "display: block" %>
+    <%= form.text_area :descripcion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  </div>
+<% end %>

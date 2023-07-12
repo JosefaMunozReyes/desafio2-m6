@@ -1,0 +1,2 @@
+module CometariosHelper
+end

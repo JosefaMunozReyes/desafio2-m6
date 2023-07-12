@@ -1,0 +1,22 @@
+<%= form_with(model: cometario) do |form| %>
+  <% if cometario.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cometario.errors.count, "error") %> prohibited this cometario from being saved:</h2>
+
+      <ul>
+        <% cometario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :detalle, style: "display: block" %>
+    <%= form.text_area :detalle %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

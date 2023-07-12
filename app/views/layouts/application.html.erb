@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body>
+  <body class="back">
     <% if user_signed_in? %>
       <%= render "shared/navbar_dos" %>
     <% else %>

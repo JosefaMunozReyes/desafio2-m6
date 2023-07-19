@@ -1,6 +1,7 @@
 class NoticiasController < ApplicationController
   before_action :set_noticia, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+
   # GET /noticias or /noticias.json
   def index
     @noticias = Noticia.all

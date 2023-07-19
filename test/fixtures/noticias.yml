@@ -3,7 +3,8 @@
 one:
   titulo: MyString
   descripcion: MyText
-
+  user_id: one
 two:
   titulo: MyString
   descripcion: MyText
+  user_id: two
